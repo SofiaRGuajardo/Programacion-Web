@@ -6,18 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
 </head>
-<form>
 <body>
-<h1>Formulario</h1>
-<p>
-    <label for="nom">Nombre</label>
-    <input type="text" name="Nombre"/>
-</p>
-<p><label for="apellido">Apellido</label><input type="text" name="apellido"/></p>
-<label for="Sexo">Sexo</label>
-<ul><li><input type="radio" name="sexo" value="Hombre"><label>Hombre</label></li>
-<li><input type="radio" name="sexo" value="Mujer"><label>Mujer</label></li></ul>
-<input type="submit"/>
+<form> 
+<h1>FORMULARIO</h1> 
+    <label for="Nombre y Apellido" class=subtitulo>Nombre y Apellido</label><br>
+    <input type="text" name="Nombre y Apellido" id="Nombre y Apellido"><br>
+
+    <label class=subtitulo>Sexo</label><br>
+<ul>
+    <li><input type="radio" name="sexo" value="Hombre" id="Hombre"><label for="Hombre">Hombre</label></li>
+    <li><input type="radio" name="sexo" value="Mujer" id="Mujer"><label for="Mujer">Mujer</label></li>
+</ul>
+
+    <label for="Correo" class=subtitulo>Correo Electrónico</label><br>
+    <input type="text" name="Correo Electrónico" id="Correo"><br>
+
+    <label class="subtitulo">Redes sociales</label><br>
+<ul>
+    <li><input type="checkbox" name="redes sociales" value="Instagram" id="Instagram"><label for="Instagran">Instagram</label></li>
+    <li><input type="checkbox" name="redes sociales" value="Facebook" id="Facebook"><label for="Facebook">Facebook</label></li>
+    <li><input type="checkbox" name="redes sociales" value="Twitter" id="Twitter"><label for="Twitter">Twitter</label></li>
+</ul>
+
+    <label class="subtitulo">Mensaje</label><br>
+    <textarea></textarea></br>
+
+<input type="submit" value="Enviar datos"/>
+<button>Mi Instagram</button>
 <h4>Ver mi <a href="ejercicio01.html">perfil</a></h4>
 </body>
 </form>
