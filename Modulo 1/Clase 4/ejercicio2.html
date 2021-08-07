@@ -9,14 +9,14 @@
 <body>
     <script>
         var numeros = [10, 7511, 2, 3665, 356, 746]
+        var mayor = 0;
         
-        var mayor = 0,
-        for(var i = 0; i < numeros.length; i++) {
-            if (numeros[i] > mayor){
-                mayor = numeros[i];
+        for (var i = 0; i < numeros.length; i++){
+            if (numeros[i] > mayor) {
+            mayor = numeros [i];
             }
         }
-        console.log('el mayor de ' + numeros + 'es ' + mayor);
+          console.log('el mayor de ' + numeros + ' es ' + mayor);
     </script>
 </body>
 </html>
