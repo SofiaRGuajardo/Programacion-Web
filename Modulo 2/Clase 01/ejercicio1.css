@@ -1,0 +1,17 @@
+.cuadrados{
+    display: flex;
+}
+.cuadro{
+    height: 200px;
+    width: 200px;
+    cursor: grab;
+}
+.violeta{
+    background-color: #B500C0 ;
+}
+.amarillo{
+    background-color: #FFFF03;
+}
+.rojo{
+    background-color: #FF0000;
+}
