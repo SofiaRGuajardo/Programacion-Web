@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cerveceria Liverpool</title>
+    <title>Centro Universitario</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Open+Sans:wght@400;700&display=swap"
@@ -17,44 +17,50 @@
 
 <body>
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">LIVERPOOL</a>
+        <a class="navbar-brand" href="#">Centro Universitario</a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="#">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Novedades</a>
+                    <a class="nav-link" href="#">Noticias</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Historia</a>
+                    <a class="nav-link" href="#">Universidades</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Nosotros</a>
+                    <a class="nav-link" href="#">Provincias</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Conocenos</a>
+                    <a class="nav-link" href="#">Cursos</a>
                 </li>
             </ul>
+            <nav class="navbar navbar-dark bg-dark">
+                <form class="form-inline">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Universidad/Carrera" aria-label="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                </form>
+              </nav>
         </div>
 </nav>
 <div class="container-fluid">
     <div id="home" class="row align-items-center hero">
         <div class="col-lg-3 offset-lg-2">
-            <p>Bajada</p>
-            <h1>Titulo Principal</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, pariatur quo suscipit ad fugiat dolore eius accusantium quas dignissimos? Quod alias nemo maiores dolorum ea cum ipsum quis hic accusamus!</p>
+            <p>Noticias</p>
+            <h1>Presencialidad</h1>
+            <p>A la espera de la aprobación de los protocolos, las universidades esperan retomar en este último cuatrimestre del año la cursada presencial.</p>
         </div>
     </div>
 <div id="novedades" class="row py-4">
     <div class="col-md-5 offset-md-2 py-3">
-        <h2>Novedades</h2>
+        <h2>Universidades</h2>
         <ul class="lista-novedades">
-            <li><a href="#" data-toggle="modal" data-target="#modalEjemplo"><img src="img/novedades01.jpg"> Nuevas recetas</a></li>
-            <li><a href="#"><img src="img/novedades01.jpg"> Nuevas recetas</a></li>
-            <li><a href="#"><img src="img/novedades01.jpg"> Nuevas recetas</a></li>
-            <li><a href="#"><img src="img/novedades01.jpg"> Nuevas recetas</a></li>
-            <li><a href="#"><img src="img/novedades01.jpg"> Nuevas recetas</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#modalUBA"><img src="img/uba.jpg" width="150px"> UBA</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#modalUNLP"><img src="img/unlp.jpg" width="150px"> UNLP</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#modalUNC"><img src="img/unc.jpg" width="150px"> UNC</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#modalUTN"><img src="img/utn.png" width="150px"> UTN</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#modalUNCuyo"><img src="img/UNCuyo.jpg" width="150px"> UNCuyo</a></li>
         </ul>
     </div>
 <div class="col-md-3">
@@ -68,21 +74,21 @@
         </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <div cass="testimonio">
-                <h5>"La mejor birra del mundo!!</h5>
-                <p>Francisco, Monte Grande</p>
+            <div class="testimonio">
+                <h5>"Este año empecé Ingeniería Aeronáutica en la UTN!!</h5>
+                <p>Francisco Monte Grande</p>
             </div>
         </div>
         <div class="carousel-item">
             <div class="testimonio">
-            <h5>La mejor birra de mundo 2!!</h5>
-            <p>Papa Francisco</p>
+            <h5>Todavía no me decido si Medicina o Enfermería</h5>
+            <p>Marta Minujín</p>
             </div>
         </div>
         <div class="carousel-item">
             <div class="testimonio">
-            <h5>"La mejor birra del mundo 3!!</h5>
-            <p>Eric, Mataderos</p>
+            <h5>"Este es mi último año del Profesora de Música en la UNCuyo!"</h5>
+            <p>Shawn Mendes</p>
             </div>
         </div>
     </div>
@@ -97,25 +103,109 @@
         </div>
     </div>
 </div>
-<div class="modal fade" id="modalEjemplo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+<!--MODAL-->
+<div class="modal fade" id="modalUBA" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Receta</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Universidad de Buenos Aires</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                 </div>
                 <div class="modal-body">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus voluptatibus animi id aut voluptates molestiae, voluptatem, dolor cum dolorem esse quam veritatis voluptas atque laboriosam mollitia possimus consequatur ipsa consequuntur!</p>
+                <p>La Universidad de Buenos Aires (UBA) es una universidad nacional pública argentina con sede en la ciudad de Buenos Aires. La UBA es la mayor universidad de Argentina y está considerada uno de los centros de estudios más prestigiosos de América y del mundo.</p>
+                <a href="https://www.uba.ar/#/" target="_blank">UBA</a>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-primary">Oferta Academíca</button>
                 </div>
             </div>
         </div>
     </div>
+</div>
+<div class="modal fade" id="modalUNLP" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+             <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Universidad Nacional de La Plata</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+            </div>
+            <div class="modal-body">
+            <p>La Universidad Nacional de La Plata (UNLP) es una universidad pública de la República Argentina. Tiene sede en la capital de la Provincia de Buenos Aires y está considerada una de las dos principales instituciones educativas y representativas del país, junto a la Universidad de Buenos Aires, según el University Rankings by Academic Performance del URAP Center.</p>
+            <a href="https://unlp.edu.ar/" target="_blank">UNLP</a>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Oferta Academíca</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modalUNC" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+             <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Universidad Nacional de Córdoba</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+            </div>
+            <div class="modal-body">
+            <p>La Universidad Nacional de Córdoba (UNC) es una universidad pública de Argentina. Tiene sede en la ciudad de Córdoba. Fundada en 1613, es la más antigua del país y una de las primeras de América. Su enseñanza es libre, gratuita y laica. Actualmente tiene una población estudiantil de unos 136 mil estudiantes aproximadamente.</p>
+            <a href="https://www.unc.edu.ar/" target="_blank">UNC</a>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Oferta Academíca</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modalUTN" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+             <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Universidad Tecnológica Nacional</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+            </div>
+            <div class="modal-body">
+            <p>La Universidad Tecnológica Nacional (UTN) es una universidad pública nacional de Argentina, como una continuación de la Universidad Obrera Nacional. Es la única universidad del país con una organización federal y cuya estructura académica tiene a las ingenierías como objetivo prioritario.</p>
+            <a href="https://utn.edu.ar/es/" target="_blank">UTN</a>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Oferta Academíca</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modalUNCuyo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+             <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Universidad Nacional de Cuyo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+            </div>
+            <div class="modal-body">
+            <p>Universidad Nacional de Cuyo (UNCuyo) es el mayor centro de educación superior de la Provincia de Mendoza, República Argentina. Fue creada en 1939 en respuesta a los requerimientos de Mendoza, y de las provincias de San Juan y San Luis, que conforman la región de Cuyo.</p>
+            <a href="https://www.uncuyo.edu.ar/" target="_blank">UNCuyo</a>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Oferta Academíca</button>
+            </div>
+        </div>
+    </div>
+</div>
 </div>
         <footer>
             <p class="text-center">Diseñado por: Sofia Guajardo. Año 2021</p>
