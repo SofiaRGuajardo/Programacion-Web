@@ -1,42 +1,70 @@
-/* font-family: 'Alfa Slab One', cursive;
-font-family: 'Open Sans', sans-serif; */
-
-footer{
-    background-color: rgb(255, 196, 0);
+/* font-family: 'Playfair Display', serif;
+font-family: 'Raleway', sans-serif; */
+.container{
+    font-family: 'Raleway', sans-serif;
+    background-color: #1D2D5F;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    height: 50px;
 }
-h1,h2{
-    font-family: 'Alfa Slab One', cursive;
+.centro-universitario{
+    color: #40CEE3;
+} 
+.nav-link, .btn{
+    color: #D8D5C4;
+    padding-right: 10px;
+}
+footer{
+    background-color: #40CEE3;
 }
 .hero{
     background: url(../img/header2.jpg) no-repeat;
     background-size: cover;
     height: 0.5vh;
     min-height: 600px;
-    color:rgb(2, 2, 2);
+    color:rgb(255, 255, 255);
+    text-shadow: 1px 1px 1px #000, 1px 1px 1px #000, 1px 1px 1px #000, 1px 1px 1px #000;
 }
-/*aca empieza novedades*/
-.lista-novedades {
+p{
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+}
+h1,h2{
+    font-family: 'Playfair Display', serif;
+}
+h3{
+    text-align: center;
+}
+h4{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+}
+/*aca empieza modal*/
+.lista-universidades {
     margin: 0;
     padding: 0;
     list-style: none;
 }
-.lista-novedades li {
+.lista-universidades li {
     margin: 4px 0;
 }
-.lista-novedades li a {
-    background-color: #fff;
-    font-family: 'Alfa Slab One', cursive;
+.lista-universidades li a {
+    background-color: #F55E5D;
+    font-family: 'Raleway', sans-serif;
     text-decoration: none;
     font-size: 1.2rem;
-    color: #a0a0a0;
+    color: #D8D5C4;
     transition: all .2s ease-in-out;
     display: block;
 }
-.lista-novedades li a:hover {
-    color:#212529;
+.lista-universidades li a:hover {
+    color:#d10000;
     background-color: #dadada;
 }
-.lista-novedades li a img{
+.lista-universidades li a img{
     width: 120px;
     height: 50px;
     filter: grayscale();
@@ -44,22 +72,57 @@ h1,h2{
     margin-right: 1rem;
     opacity: 0.7;
 }
-.lista-novedades li a:hover img {
+.lista-universidades li a:hover img {
     filter: none;
     margin-right: 1.4rem;
     opacity: 1;
 }
-/*finde novedades*/
 /*Inicio testimonios*/
 .testimonios{
-    background-color: #dadada;
+    background-color: #D8D5C4;
     padding-bottom: 4rem !important;
 }
 .testimonios{
     text-align: center;
-    padding: 50px 20px;
+    padding: 40px 20px;
+}
+.titulotestimonio{
+    padding-top: 50px;
 }
 .carousel-indicators li{
     background-color: #000;
 }
-/*fin testimonios*/
+.carousel-control-prev-icon, .carousel-control-next-icon{
+    height: 50px;
+    width: 50px;
+    outline: rgb(201, 201, 201);
+    background-color: rgba(0, 0, 0, 0.3);
+    background-size: 100%, 100%;
+    border-radius: 50%;
+}
+/* especialidades */
+.textoespecilidades{
+    text-align: center;
+}
+/* Inicio curso */
+.curso{
+    background-color: #D8D5C4;
+    padding-bottom: 20px;
+}
+.curso, .card-deck{
+    padding-bottom: 5px;
+}
+.titulocurso{
+    text-align: center;
+    padding-top: 55px;
+}
+.nombrecurso{
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 22px;
+    color: #1D2D5F;
+}
+.card img{
+    width: 269px;
+    height: 200px;
+}

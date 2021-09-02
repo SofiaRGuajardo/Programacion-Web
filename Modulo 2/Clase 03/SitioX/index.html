@@ -8,65 +8,81 @@
     <title>Centro Universitario</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Open+Sans:wght@400;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,500&family=Raleway:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="css/stylo.css">
+    <script type="text/javascript" src="js/codigo.js"></script>
 </head>
 
 <body>
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Centro Universitario</a>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="centro-universitario" href="#">Centro Universitario</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+      
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Noticias</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Universidades</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Provincias</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Cursos</a>
-                </li>
-            </ul>
-            <nav class="navbar navbar-dark bg-dark">
-                <form class="form-inline">
-                  <input class="form-control mr-sm-2" type="search" placeholder="Universidad/Carrera" aria-label="Search">
-                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-                </form>
-              </nav>
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" data scroll href="#noticias">Noticias <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Universidades
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalUBA">UBA</a>
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalUNLP">UNLP</a>
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalUNC">UNC</a>
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalUTN">UTN</a>
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalUNCuyo">UNCuyo</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data scroll href="#especialidades">Especialidades</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data scroll href="#cursos">Cursos</a>
+            </li>
+              <li class="nav-item">
+                <a class="nav-link" data scroll href="#ubicacion">Ubicación</a>
+              </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Universidad/Carrera" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+          </form>
         </div>
-</nav>
+        </div>
+    </nav>
+<!-- NOTICIAS -->
 <div class="container-fluid">
-    <div id="home" class="row align-items-center hero">
+    <div id="noticias" class="row align-items-center hero">
         <div class="col-lg-3 offset-lg-2">
             <p>Noticias</p>
             <h1>Presencialidad</h1>
             <p>A la espera de la aprobación de los protocolos, las universidades esperan retomar en este último cuatrimestre del año la cursada presencial.</p>
         </div>
     </div>
-<div id="novedades" class="row py-4">
+<!-- UNIVERSIDAD -->
+<div id="universidad" class="row py-4">
     <div class="col-md-5 offset-md-2 py-3">
         <h2>Universidades</h2>
-        <ul class="lista-novedades">
-            <li><a href="#" data-toggle="modal" data-target="#modalUBA"><img src="img/uba.jpg" width="150px"> UBA</a></li>
-            <li><a href="#" data-toggle="modal" data-target="#modalUNLP"><img src="img/unlp.jpg" width="150px"> UNLP</a></li>
-            <li><a href="#" data-toggle="modal" data-target="#modalUNC"><img src="img/unc.jpg" width="150px"> UNC</a></li>
-            <li><a href="#" data-toggle="modal" data-target="#modalUTN"><img src="img/utn.png" width="150px"> UTN</a></li>
-            <li><a href="#" data-toggle="modal" data-target="#modalUNCuyo"><img src="img/UNCuyo.jpg" width="150px"> UNCuyo</a></li>
+        <ul class="lista-universidades">
+            <li><a href="#" data-toggle="modal" data-target="#modalUBA"><img src="img/uba.jpg" width="150px"> Universidad de Buenos Aires</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#modalUNLP"><img src="img/unlp.jpg" width="150px"> Universidad Nacional de La Plata</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#modalUNC"><img src="img/unc.jpg" width="150px"> Universidad Naciona de Córdoba</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#modalUTN"><img src="img/utn.png" width="150px"> Universidad Tecnológica Nacional</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#modalUNCuyo"><img src="img/UNCuyo.jpg" width="150px"> Universidad Nacional de Cuyo</a></li>
         </ul>
     </div>
+<!-- COMENTARIOS -->
 <div class="col-md-3">
-    <div class="rounded py-3 testimonios">
-        <h2 class="text-center">Testimonios</h2>
+    <div class="rounded py-3 testimonios">   
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <h2 class="titulotestimonio">Testimonios</h2>
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -76,19 +92,19 @@
         <div class="carousel-item active">
             <div class="testimonio">
                 <h5>"Este año empecé Ingeniería Aeronáutica en la UTN!!</h5>
-                <p>Francisco Monte Grande</p>
+                <p style="margin-bottom: 92px";>Francisco Monte Grande</p>
             </div>
         </div>
         <div class="carousel-item">
             <div class="testimonio">
             <h5>Todavía no me decido si Medicina o Enfermería</h5>
-            <p>Marta Minujín</p>
+            <p style="margin-bottom: 92px";>Marta Minujín</p>
             </div>
         </div>
         <div class="carousel-item">
             <div class="testimonio">
-            <h5>"Este es mi último año del Profesora de Música en la UNCuyo!"</h5>
-            <p>Shawn Mendes</p>
+            <h5>"Este es mi último año del Profesorado de Música en la UNCuyo!"</h5>
+            <p style="margin-bottom: 92px";>Shawn Mendes</p>
             </div>
         </div>
     </div>
@@ -103,7 +119,6 @@
         </div>
     </div>
 </div>
-
 <!--MODAL-->
 <div class="modal fade" id="modalUBA" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -206,11 +221,166 @@
         </div>
     </div>
 </div>
+<!-- ESPECIALIDADES -->
+<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+    <h2 id="especialidades" class="titulocurso">Especialidades en la UNLP</h2>
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
+    </ol>
+        <div class="carousel-inner">
+            
+          <div class="carousel-item active">
+            <div class="especialidades">
+              <h3 class="nombrecurso">Facultad de Arquitectura y Urbanismo</h3>
+              <h4 class="textoespecilidades">Carreras</h4>
+                <p class="textoespecilidades">Arquitectura</p>
+                <br>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="especialidades">
+                <h3 class="nombrecurso">Facultad de Arte</h3>
+                <h4 class="textoespecilidades">Carreras</h4>
+                  <p class="textoespecilidades">Diseño en Comunicación Visual</p>
+                  <p class="textoespecilidades">Licenciatura y Profesora Diseño Multimedial</p>
+                  <p class="textoespecilidades">Licenciatura y Profesorado en Música</p>
+                  <p class="textoespecilidades">Licenciatura y Profesorado en Historia del Arte</p>
+                  <br>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="especialidades">
+                <h3 class="nombrecurso">Facultad de Ciencias Agrarias y Forestales</h3>
+                <h4 class="textoespecilidades">Carreras</h4>
+                  <p class="textoespecilidades">Ingeniería Agronómica</p>
+                  <p class="textoespecilidades">Ingeniería Forestal</p>
+                  <br>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="especialidades">
+                <h3 class="nombrecurso">Facultad de Ciencias Económicas</h3>
+                <h4 class="textoespecilidades">Carreras</h4>
+                  <p class="textoespecilidades">Contador Público</p>
+                  <p class="textoespecilidades">Licenciatura de Administración</p>
+                  <p class="textoespecilidades">Licenciatura en Economía</p>
+                  <br>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="especialidades">
+                <h3 class="nombrecurso">Facultad de Ciencias Exactas</h3>
+                <h4 class="textoespecilidades">Carreras</h4>
+                  <p class="textoespecilidades">Farmacia</p>
+                  <p class="textoespecilidades">Licenciatura en Física</p>
+                  <p class="textoespecilidades">Licenciatura en Química</p>
+                  <br>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
 </div>
+<!-- CURSOS -->
+<div id="cursos" class="row align-items-stretch my-3 curso">
+    <div class="col-lg-8 offset-lg-2">
+        <h2 class="titulocurso">Cursos Gratuitos Online</h2>
+        <div class="card-deck">
+            <div class="card">
+                <img src="img/curso1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h3 class="nombrecurso">Dirección y Gestión de Proyectos</h3>
+                    <h4>Universidad</h4><p>UNC</p>
+                    <h4>Inicio</h4><p>Sep 1, 2021</p>
+                    <h4>Finalización</h4><p>Dic 30, 2021</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/curso2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h3 class="nombrecurso">Matríz de Marco Lógico</h3>
+                    <h4>Universidad</h4><p>UNC</p>
+                    <h4>Inicio</h4><p>Sep 1, 2021</p>
+                    <h4>Finalización</h4><p>Dic 30, 2021</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/curso3.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h3 class="nombrecurso">Metodologías y Herramientas de Gestión de Proyectos</h3>
+                    <h4>Universidad</h4><p>UNC</p>
+                    <h4>Inicio</h4><p>Sep 1, 2021</p>
+                    <h4>Finalización</h4><p>Dic 30, 2021</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- MAPA + FORMULARIO -->
+    <div id="ubicacion" class="row py-4">
+        <div class="col-md-4 offset-md-2">
+            <h2 class="tituloubicacion">Ubicación</h2>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.190139523871!2d-58.373101689147305!3d-34.599353184655854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacb5fcd5613%3A0x42c3468d2812b615!2sUniversidad%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1630506626813!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+        <div class="col-md-4 mt-4  mt-sm-0">
+            <h2>Consulta por tu Carrera</h2>
+            <form>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="nombre apellido">Nombre y Apellido</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="">
+                    </div>
+                    <div class="col-md-6 bm-3">
+                        <label for="carrera">Email</label>
+                        <input type="text" class="form-control" id="nombre" placegolder="">
+                    </div>
+                    <div class="col-md-6 bm-3">
+                        <label for="carrera">Carrera</label>
+                        <input type="text" class="form-control" id="nombre" placegolder="">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputState">Universidad</label>
+                        <select id="inputState" class="form-control">
+                          <option selected>Selecciona</option>
+                          <option>UBA</option>
+                          <option>UNLP</option>
+                          <option>UNC</option>
+                          <option>UTN</option>
+                          <option>UNCuyo</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea class="form-control" id="mensaje" rown="4"></textarea>
+                </div>
+                    <div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+            </form>
+        </div>
+    </div>
+<!-- FOOTER -->
         <footer>
             <p class="text-center">Diseñado por: Sofia Guajardo. Año 2021</p>
         </footer>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+<script>
+	var scroll = new SmoothScroll('a[href*="#"]');
+</script>
 </body>
 </html>
