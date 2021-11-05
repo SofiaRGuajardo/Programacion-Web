@@ -55,11 +55,9 @@
     <div class="col-md-5 offset-md-2 py-3">
         <h2>Universidades</h2>
         <ul class="lista-universidades">
-            <li><a href="#" data-toggle="modal" data-target="#modalUBA"><img src="/images/uba.jpg" width="150px"> Universidad de Buenos Aires</a></li>
-            <li><a href="#" data-toggle="modal" data-target="#modalUNLP"><img src="/images/unlp.jpg" width="150px"> Universidad Nacional de La Plata</a></li>
-            <li><a href="#" data-toggle="modal" data-target="#modalUNC"><img src="/images/unc.jpg" width="150px"> Universidad Naciona de Córdoba</a></li>
-            <li><a href="#" data-toggle="modal" data-target="#modalUTN"><img src="/images/utn.png" width="150px"> Universidad Tecnológica Nacional</a></li>
-            <li><a href="#" data-toggle="modal" data-target="#modalUNCuyo"><img src="/images/UNCuyo.jpg" width="150px"> Universidad Nacional de Cuyo</a></li>
+            {{#each novedades}}
+            <li><a href="javascript:void(0)" data-toggle="modal" data-target="#modal{{id}}"><img src="/images/uba.jpg" width="150px"> {{titulo}}</a></li>
+            {{/each}}
         </ul>
     </div>
 <!-- COMENTARIOS -->
@@ -104,17 +102,19 @@
     </div>
 </div>
 <!--MODAL-->
-<div class="modal fade" id="modalUBA" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+{{#each novedades}}
+<div class="modal fade" id="modal{{id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Universidad de Buenos Aires</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">{{titulo}}</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                 </div>
                 <div class="modal-body">
-                <p>La Universidad de Buenos Aires (UBA) es una universidad nacional pública argentina con sede en la ciudad de Buenos Aires. La UBA es la mayor universidad de Argentina y está considerada uno de los centros de estudios más prestigiosos de América y del mundo.</p>
+                <h4>{{subtitulo}}</h4>
+                <p>{{cuerpo}}</p>
                 <a href="https://www.uba.ar/#/" target="_blank">UBA</a>
                 </div>
                 <div class="modal-footer">
@@ -205,6 +205,7 @@
         </div>
     </div>
 </div>
+{{/each}}
 <!-- ESPECIALIDADES -->
 <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
     <h2 id="especialidades" class="titulocurso">Especialidades en la UNLP</h2>
