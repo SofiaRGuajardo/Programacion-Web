@@ -1,0 +1,36 @@
+/* font-family: 'Lato', sans-serif; */
+.listado{
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 550;
+}
+.listado2{
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 300px;
+}
+body{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+}
+#navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 240px;
+    padding: 6px 14px;
+    background-image: linear-gradient(#2ac3be, #d1e7f1);
+}
+#novedades{
+    padding-left: 250px;
+    padding-top: 50px;
+}
+#popuForm{
+    padding-left: 255px;
+    padding-top: 30px;
+}
+form{
+    padding-left: 20px;
+}
