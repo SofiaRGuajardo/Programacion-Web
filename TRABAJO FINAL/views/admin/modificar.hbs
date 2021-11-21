@@ -1,0 +1,35 @@
+<div class="container mt-3">
+    <h3>MODIFICAR NOVEDAD</h3>
+    <form action="/admin/novedades/modificar" method="post">
+    <div class="row g-2">
+        <input type="hidden" value="{{novedad.id}}" name="id">
+       <div class="col-md">
+            <div class="form-floating">
+            <input type="text" class="form-control" id="floatingInputGrid" value="{{novedad.fecha}}" name="fecha">
+            <label for="floatingInputGrid">Modificar fecha</label>
+        </div>
+    </div>
+       <div class="col-md">
+        <div class="form-floating">
+            <input type="text" class="form-control" id="floatingInputGrid" value="{{novedad.ubicacion}}" name="ubicacion">
+            <label for="floatingInputGrid">Modificar Ubicación</label>
+        </div>
+    </div>
+    </div>
+    <div class="mt-3">
+   <input class="form-control" type="text" placeholder="Titulo" value="{{novedad.titulo}}" aria-label="default input example" name="titulo">
+    <div class="mt-3">
+    </div>
+    <div class="mt-3">
+    <input class="form-control" type="text" placeholder="Subtitulo" value="{{novedad.subtitulo}}" aria-label="default input example" name="subtitulo">
+    <div class="mt-3">
+    <textarea class="form-control" type="text" placeholder="Cuerpo" id="exampleFormControlTextarea1" rows="3" name="cuerpo">{{novedad.cuerpo}}</textarea>
+    </div>
+    <div class="d-grid gap-2 mt-3">
+        <button class="btn btn-outline-warning" type="submit">Modificar</button>
+    </div>
+    </form>
+    {{#if error}}
+        <h5>{{message}}</h5>
+    {{/if}}
+</div>
