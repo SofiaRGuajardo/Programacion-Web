@@ -29,12 +29,12 @@ var transport = nodemailer.createTransport({
     user: process.env.SMTP_USER,
     pass: process.env.SMTP_PASS
   }
-})
+});
 
 var info = await transport.sendMail(obj);
 
 res.render('index',{
-  message: 'Consulta enviada',
+  message: 'Consulta enviada'
 });
 
 });
