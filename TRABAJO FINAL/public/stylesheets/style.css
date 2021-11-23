@@ -3,31 +3,18 @@
     font-family: 'Lato', sans-serif;
     font-size: 22px;
     font-weight: 400px;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 .listado2{
     font-family: 'Lato', sans-serif;
     font-size: 20px;
     font-weight: 300px;
+    color: rgb(255, 255, 255);
 }
-body{
-    position: relative;
-    min-height: 100vh;
-    width: 100%;
+small{
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
 }
-#navbar{
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 240px;
-    padding: 6px 14px;
-    background-image: linear-gradient(#2ac3be, #d1e7f1);
-}
-#myCarousel{
-    font-size: 1.125rem;     
-    text-anchor: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
+#offcanvasNavbar{
+    background-color: rgb(71, 4, 134);
 }

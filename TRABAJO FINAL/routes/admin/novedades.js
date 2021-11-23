@@ -1,5 +1,5 @@
 var express = require('express');
-const { rawListeners } = require('../../models/bd');
+// const { rawListeners } = require('../../models/bd');
 var router = express.Router();
 var novedadesModel = require('./../../models/novedadesModel');
 var util = require('util');
@@ -17,7 +17,8 @@ router.get('/', async function(req, res, next) {
   });
 });
 
-router.get('/eliminar/:id', async (req, res, next) => { //eliminar
+/*ELIMINAR*/
+router.get('/eliminar/:id', async (req, res, next) => { 
   var id = req.params.id;
 
   let novedad = await novedadesModel.getNovedadById(id);
@@ -29,34 +30,34 @@ router.get('/eliminar/:id', async (req, res, next) => { //eliminar
   res.redirect('/admin/novedades')
 });
 
-router.get ('/agregar', (req, res, next) => { //agregar
+/*AGREGAR*/
+router.get('/agregar', (req, res, next) => { 
   res.render('admin/agregar', {
     layout: 'admin/layout'
-  })
+  });
 });
 
 router.post('/agregar', async (req, res, next) => {
-  
+  try {
     var img_id = '';
     if (req.files && Object.keys(req.files).length > 0) {
     imagen = req.files.imagen;
     img_id = (await uploader(imagen.tempFilePath)).public_id;
   }
-  try {
     if (req.body.fecha != "" && req.body.ubicacion != "" && req.body.titulo != "" && req.body.subtitulo != "" && req.body.cuerpo != "") {
-
-      await novedadesModel.insertNovedad({
+      await novedadesModel.insertNovedades({
         ...req.body, 
         img_id
       });
       res.redirect('/admin/novedades')
-    }else{
+    } else {
       res.render('admin/agregar', {
         layout: 'admin/layout',
         error: true, message: 'Todos los campos son requeridos'
       })
     }
-  }catch (error) {
+  } catch (error) {
+    console.log(error)
     res.render('admin/agregar', {
       layout: 'admin/layout',
       error: true, message: 'No se creó la novedad'
@@ -77,12 +78,12 @@ router.post('/modificar', async (req, res, next) => {
   try{
     let img_id = req.body.img_original;
     let borrar_img_vieja = false;
-
+    
     if (req.body.img_delete === "1") {
       img_id = null;
       borrar_img_vieja = true;
     } else {
-      if (req.files && Object.keys(req.files).lenght > 0) {
+      if (req.files && Object.keys(req.files).length > 0) {
         imagen = req.files.imagen;
         img_id = (await uploader(imagen.tempFilePath)).public_id;
         borrar_img_vieja = true;

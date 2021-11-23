@@ -14,12 +14,12 @@ async function deleteNovedadesById(id) { //borra novedades
 
 async function insertNovedades(obj) {
     try {
-        var query = "insert into novedades set ?";
-        var rows = await pool.query(query, [obj])
+        var query = "insert into novedades set ? ";
+        var rows = await pool.query(query, [obj]);
         return rows;
 
     }catch (error) {
-        throw erro;
+        throw error;
     }
 }
 
