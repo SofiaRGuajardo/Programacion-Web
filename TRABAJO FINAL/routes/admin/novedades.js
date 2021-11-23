@@ -4,16 +4,42 @@ var router = express.Router();
 var novedadesModel = require('./../../models/novedadesModel');
 var util = require('util');
 var cloudinary = require('cloudinary').v2;
+const { runInNewContext } = require('vm');
 const uploader = util.promisify(cloudinary.uploader.upload);
 const destroy = util.promisify(cloudinary.uploader.destroy);
 
 /* GET home page. */
 router.get('/', async function(req, res, next) {
-  var novedades = await novedadesModel.getNovedades();
+  
+  // var novedades = await novedadesModel.getNovedades();
+
+  var novedades
+  if(req.query.q === undefined) {
+    novedades = await novedadesModel.getNovedades();
+  } else{
+    novedades = await novedadesModel.buscarNovedades(req.query.q);
+  }
+
+  novedades = novedades.map(novedad => {
+    if(novedad.img_id) {
+      const imagen = cloudinary.image(novedad.img_id, {
+        width: 100,
+        height: 100,
+        crop: 'fill'
+      });
+      return {
+        ...novedad,
+        imagen: ''
+      }
+    }
+  });
+
   res.render('admin/novedades', {
       layout:'admin/layout',
       usuario: req.session.nombre,
-      novedades
+      novedades,
+      is_seach: req.query.q !== undefined,
+      q: req.query.q
   });
 });
 
@@ -65,6 +91,7 @@ router.post('/agregar', async (req, res, next) => {
   }
 });
 
+/*MODIFICAR*/
 router.get('/modificar/:id', async (req, res, next) => {
   let id = req.params.id;
   let novedad = await novedadesModel.getNovedadById(id);
