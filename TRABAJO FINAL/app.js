@@ -6,6 +6,7 @@ var logger = require('morgan');
 
 require('dotenv').config();
 var session = require('express-session');
+var fileUpload = require('express-fileupload');
 
 var pool = require('./models/bd');
 
@@ -13,6 +14,11 @@ var indexRouter = require('./routes/index');
 // var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/admin/login');
 var adminRouter = require('./routes/admin/novedades');
+var noroesteRouter = require('./routes/noroeste');
+var nordesteRouter = require('./routes/nordeste');
+var pampeanaRouter = require('./routes/pampeana');
+var cuyoRouter = require('./routes/cuyo');
+var patagoniaRouter = require('./routes/patagonia');
 
 var app = express();
 
@@ -45,10 +51,20 @@ secured = async (req, res, next) => {
   }
 }
 
+app.use(fileUpload({
+  useTempFiles: true,
+  tempFileDir: '/tmp/'
+}));
+
 app.use('/', indexRouter);
 // app.use('/users', usersRouter);
 app.use('/admin/login', loginRouter);
 app.use('/admin/novedades', secured, adminRouter);
+app.use('/noroeste', noroesteRouter);
+app.use('/nordeste', nordesteRouter);
+app.use('/pampeana', pampeanaRouter);
+app.use('/cuyo', cuyoRouter);
+app.use('/patagonia', patagoniaRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

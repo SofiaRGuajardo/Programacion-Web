@@ -1,20 +1,20 @@
-<div class="container" style="margin-top: 30px;">
-  <div class="row">
-    <div class="col">
-    <form action="/admin/login" method="post">
-      <div class="mb-3">
-        <label for="exampleFormControlTextarea1" class="form-label">Usuario</label>
-        <input class="form-control" type="text" placeholder="" aria-label="default input example" name="usuario">
-      </div>
-      <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" name="password">
-      </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-      {{#if error}}
-        <p>Usuario o contraseña incorrecto</p>
-      {{/if}}
+<div class="container col-md-3">
+<main class="form-signin">
+  <a href="/"><img class="mb-4 mt-5 rounded mx-auto d-block" src="/images/logo/logo_large.png" width="150px" height="120px"></a>
+    <h1 class="h3 mb-3 fw-normal text-center">Acceder</h1>
+  <form action="/admin/login" method="post">
+    <div class="form-floating">
+      <input type="text" class="form-control" id="floatingInput" name="usuario">
+      <label for="floatingInput">Usuario</label>
     </div>
-  </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="floatingPassword" name="password">
+      <label for="floatingPassword">Password</label>
+    </div>
+    <button class="w-100 btn btn-lg btn-outline-dark" type="submit">Iniciar Sesión</button>
+  </form>
+  {{#if error}}
+        <p>Usuario o contraseña incorrecto</p>
+  {{/if}}
+</main>
 </div>
