@@ -1,0 +1,242 @@
+<!--NAV-->
+<nav class="navbar navbar-dark fixed-top">
+  <div class="container-fluid">
+    <button class="navbar-toggler" style="background-color: rgb(71, 4, 134);" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <img src="images/Logo/logo_white_large.png" style="width: 100px">
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li>
+            <a href="/" class="listado nav-link link-light" aria-current="page">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                    <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+                </svg>
+              Inicio
+            </a>
+          </li>
+          <li>
+            <a class="listado" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+              </svg>
+              Regiones
+            </a>
+            <div class="collapse listado2" id="dashboard-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small" style="padding-left: 20px;">
+                <li><a class="dropdown-item" href="/noroeste">Noroeste</a></li>
+                <li><a class="dropdown-item" href="/nordeste">Nordeste</a></li>
+                <li><a class="dropdown-item" href="/pampeana">Pampeana</a></li>
+                <li><a class="dropdown-item" href="/cuyo">Cuyo</a></li>
+                <li><a class="dropdown-item" href="/patagonia">Patagonia</a></li>
+              </ul>
+            </div>
+          </li>
+          <hr>
+          <li>
+            <a href="/admin/login" class="nav-link link-dark">
+             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+              </svg>
+              Ingresar
+            </a>
+          </li>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!--CARRUSEL-->
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/images/patagonia/la pampa.jpg" class="d-block w-100" alt="La Pampa" height="600px">
+      <div class="carousel-caption d-none d-md-block">
+        <h3>La Pampa</h3>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="/images/patagonia/rio negro.jpg" class="d-block w-100" alt="Río Negro" height="600px">
+      <div class="carousel-caption d-none d-md-block">
+        <h3>Río Negro</h3>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="/images/patagonia/neuquen.jpg" class="d-block w-100" alt="Neuquén" height="600px">
+      <div class="carousel-caption d-none d-md-block">
+        <h3>Neuquén</h3>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="/images/patagonia/chubut.jpg" class="d-block w-100" alt="Chubut" height="600px">
+      <div class="carousel-caption d-none d-md-block">
+        <h3>Chubut</h3>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="/images/patagonia/santa cruz.jpg" class="d-block w-100" alt="Santa Cruz" height="600px">
+      <div class="carousel-caption d-none d-md-block">
+        <h3>Santa Cruz</h3>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="/images/patagonia/tierra del fuego.jpg" class="d-block w-100" alt="Tierra del Fuego" height="600px">
+      <div class="carousel-caption d-none d-md-block">
+        <h3>Tierra del Fuego</h3>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!--TEXTO-->
+<div id="popuForm" class="row justify-content-center py-5"> 
+    <div class="accordion accordion-flush col-md-5 offset-md-0 py-3" id="accordionFlushExample">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero vel numquam, error neque dolores asperiores illo placeat deleniti, beatae est corporis mollitia non! Consectetur eligendi accusamus sequi quibusdam, cupiditate laborum?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero vel numquam, error neque dolores asperiores illo placeat deleniti, beatae est corporis mollitia non! Consectetur eligendi accusamus sequi quibusdam, cupiditate laborum?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero vel numquam, error neque dolores asperiores illo placeat deleniti, beatae est corporis mollitia non! Consectetur eligendi accusamus sequi quibusdam, cupiditate laborum?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero vel numquam, error neque dolores asperiores illo placeat deleniti, beatae est corporis mollitia non! Consectetur eligendi accusamus sequi quibusdam, cupiditate laborum?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero vel numquam, error neque dolores asperiores illo placeat deleniti, beatae est corporis mollitia non! Consectetur eligendi accusamus sequi quibusdam, cupiditate laborum?</p>
+    </div>
+<!--GUIA TURISMO-->
+  <div class="accordion accordion-flush col-md-5 offset-md-0 py-3" id="accordionFlushExample">
+    <h3 class="text-center">Destinos</h3>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingOne">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+          La Pampa
+        </button>
+      </h2>
+      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          <h5>Paseos y excursiones en Puerto Madryn</h5>
+          <ul>
+            <li>Avistaje de ballenas desde playa El Doradillo</li>
+            <li>Monumento Nacional Ballena Franca Austral</li>
+            <li>Los pingüinos de Punta Tombo</li>
+            <li>Fiesta Nacionaldel Cordero</li>
+            <li>Snorkel y buceo con lobos marinos</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+          Río Negro
+        </button>
+      </h2>
+      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          <h5>Destinos</h5>
+          <ul>
+            <li>San Carlos de Bariloche</li>
+            <li>Las Grutas</li>
+            <li>El Bolsón</li>
+            <li>Viedma</li>
+            <li>Dina Huapi</li>
+            <li>Cipolletti</li>
+            <li>General Roca</li>
+          </ul>
+          </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+          Neuquén
+        </button>
+      </h2>
+      <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          <h5>Paseos y excursiones en Villa Carlos Paz</h5>
+          <ul>
+            <li>Costanera sobre el lago San Roque</li>
+            <li>Miradores naturales al valle de Punilla.</li>
+            <li>Parque Nacional Quebrada del Condorito. </li>
+            <li>Trekking al Cerro de la Cruz</li>
+            <li>Día y noche: vidrieras y espectáculos</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingFour">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+          Chubut
+        </button>
+      </h2>
+      <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          <h5>Paseos y excursiones en Puerto Madryn</h5>
+          <ul>
+            <li>Avistaje de ballenas desde playa El Doradillo</li>
+            <li>Monumento Nacional Ballena Franca Austral</li>
+            <li>Los pingüinos de Punta Tombo</li>
+            <li>Fiesta Nacionaldel Cordero</li>
+            <li>Snorkel y buceo con lobos marinos</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingFive">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+          Santa Cruz
+        </button>
+      </h2>
+      <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          <h5>Paseos y excursiones en Puerto Madryn</h5>
+          <ul>
+            <li>Avistaje de ballenas desde playa El Doradillo</li>
+            <li>Monumento Nacional Ballena Franca Austral</li>
+            <li>Los pingüinos de Punta Tombo</li>
+            <li>Fiesta Nacionaldel Cordero</li>
+            <li>Snorkel y buceo con lobos marinos</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingSix">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+        Tierra del Fuego
+        </button>
+      </h2>
+      <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          <h5>Paseos y excursiones en Puerto Madryn</h5>
+          <ul>
+            <li>Avistaje de ballenas desde playa El Doradillo</li>
+            <li>Monumento Nacional Ballena Franca Austral</li>
+            <li>Los pingüinos de Punta Tombo</li>
+            <li>Fiesta Nacionaldel Cordero</li>
+            <li>Snorkel y buceo con lobos marinos</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
