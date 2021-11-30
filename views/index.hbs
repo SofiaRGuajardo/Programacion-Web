@@ -24,10 +24,10 @@
             </a>
             <div class="listado2 collapse" id="dashboard-collapse">
               <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                <li><a class="dropdown-item" style="color:rgb(50, 197, 178)" href="/noroeste">Noroeste</a></li>
-                <li><a class="dropdown-item" style="color:rgb(50, 197, 178)" href="/nordeste">Nordeste</a></li>
-                <li><a class="dropdown-item" style="color:rgb(50, 197, 178)" href="/pampeana">Pampeana</a></li>
                 <li><a class="dropdown-item" style="color:rgb(50, 197, 178)" href="/cuyo">Cuyo</a></li>
+                <li><a class="dropdown-item" style="color:rgb(50, 197, 178)" href="/nordeste">Nordeste</a></li>
+                <li><a class="dropdown-item" style="color:rgb(50, 197, 178)" href="/noroeste">Noroeste</a></li>
+                <li><a class="dropdown-item" style="color:rgb(50, 197, 178)" href="/pampeana">Pampeana</a></li>
                 <li><a class="dropdown-item" style="color:rgb(50, 197, 178)" href="/patagonia">Patagonia</a></li>
               </ul>
             </div>
@@ -68,37 +68,37 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="/images/noroeste/jujuy.jpg" class="imgcar d-block w-100" alt="Noroeste" height="600px">
+       <img src="/images/cuyo/mendoza.jpg" class="imgcar d-block w-100" alt="Cuyo" height="600px">
       <div class="carousel-caption d-none d-md-block">
-        <p>Noroeste</p>
-        <a href="/noroeste" class="btn btn-outline-light" type="submit">Conoce más</a>
+        <h2>Cuyo</h2>
+        <a href="/cuyo" class="btn btn-outline-light" type="submit">Conoce más</a>
       </div>
     </div>
     <div class="carousel-item">
       <img src="/images/nordeste/misiones.jpg" class="imgcar d-block w-100" alt="Nordeste" height="600px">
       <div class="carousel-caption d-none d-md-block">
-        <p>Nordeste</p>
+        <h2>Nordeste</h2>
         <a href="/nordeste" class="btn btn-outline-light" type="submit">Conoce más</a>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="/images/noroeste/jujuy.jpg" class="imgcar d-block w-100" alt="Noroeste" height="600px">
+      <div class="carousel-caption d-none d-md-block">
+        <h2>Noroeste</h2>
+        <a href="/noroeste" class="btn btn-outline-light" type="submit">Conoce más</a>
       </div>
     </div>
     <div class="carousel-item">
       <img src="/images/pampeana/caba.jpg" class="imgcar d-block w-100" alt="Pampeana" height="600px">
       <div class="carousel-caption d-none d-md-block">
-        <p>Pampeana</p>
+        <h2>Pampeana</h2>
         <a href="/pampeana" class="btn btn-outline-light" type="submit">Conoce más</a>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="/images/cuyo/mendoza.jpg" class="imgcar d-block w-100" alt="Cuyo" height="600px">
-      <div class="carousel-caption d-none d-md-block">
-        <p>Cuyo</p>
-        <a href="/cuyo" class="btn btn-outline-light" type="submit">Conoce más</a>
       </div>
     </div>
     <div class="carousel-item">
       <img src="/images/patagonia/rio negro.jpg" class="imgcar d-block w-100" alt="Patagonia" height="600px">
       <div class="carousel-caption d-none d-md-block">
-        <p>Patagonia</p>
+        <h2>Patagonia</h2>
         <a href="/patagonia" class="btn btn-outline-light" type="submit">Conoce más</a>
       </div>
     </div>
@@ -115,17 +115,17 @@
 
 <!--NOVEDADES-->
 <div class="container px-4 py-5">
-  <h2 id="novedades" class="pb-3 border-bottom text-center">Novedades</h2>
+  <h2 id="novedades" class="titulo pb-3 border-bottom">Novedades</h2>
   <div class="row justify-content-center g-4 py-4">
     {{#each novedades}}
     <div class="col-md-5">
       <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
           <strong class="d-inline-block mb-2 text-primary">{{ubicacion}}</strong>
-          <h3 class="mb-0">{{titulo}}</h3>
-          <div class="mb-1 text-muted">{{fecha}}</div>
-          <p class="card-text mb-auto">{{subtitulo}}.</p>
-          <a href="javascript:void(0)" class="card-link" data-bs-toggle="modal" data-bs-target="#modal{{ id }}">
+          <h3 class="mb-0" style="font-family:'Spectral', serif; font-size: 30px; font-weight: bold;">{{titulo}}</h3>
+          <div class="mb-1 text-muted" style="font-family:'Lato', sans-serif;">{{fecha}}</div>
+          <p class="card-text mb-auto" style="font-family: 'Lato', sans-serif; font-size: 15px;">{{subtitulo}}.</p>
+          <a href="javascript:void(0)" class="card-link" data-bs-toggle="modal" data-bs-target="#modal{{ id }}" style="font-family: 'Lato', sans-serif; font-size: 15px;">
           Continuar...
           </a>
         </div>
@@ -140,15 +140,15 @@
 <div class="modal fade" id="modal{{id}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
-        <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">{{titulo}}</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+        <div class="modal-header" style="background-color: #0B005D;">
+        <h5 class="modal-title" id="staticBackdropLabel" style="font-family:'Spectral', serif; font-size: 30px; font-weight: bold; color:aliceblue">{{titulo}}</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close">
         </button>
         </div>
         <div class="modal-body">
-        <h4>{{subtitulo}}</h4>
+        <h5 style="font-family: 'Lato', sans-serif; font-size: 25px; font-weight: bold; text-align: center;">{{subtitulo}}</h5>
         <img src="{{imagen}}" alt="{{titulo}}" />
-        <p>{{cuerpo}}</p>
+        <p style="font-family: 'Lato', sans-serif; font-size: 19px;">{{cuerpo}}</p>
         </div>
       </div>
     </div>
@@ -158,7 +158,7 @@
 
 <!--POPULARES -->
 <div class="container px-4 py-5" id="custom-cards">
-    <h2 id="populares" class="pb-2 border-bottom text-center">Populares</h2>
+    <h2 id="populares" class="titulo pb-2 border-bottom">Populares</h2>
     <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
       <div class="col">
         <div class="card card-cover h-100 overflow-hidden text-white bg-dark shadow-lg" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/puertomadryn.jpg'); background-size: 400px; border-radius: 20px;">
@@ -172,7 +172,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.319 1.319 0 0 0-.37.265.301.301 0 0 0-.057.09V14l.002.008a.147.147 0 0 0 .016.033.617.617 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.619.619 0 0 0 .146-.15.148.148 0 0 0 .015-.033L12 14v-.004a.301.301 0 0 0-.057-.09 1.318 1.318 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465-1.281 0-2.462-.172-3.34-.465-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411z"/>
               </svg>
-                <td class="align-middle"> Rio Negro</td>
+                <td class="align-middle"> Chubut</td>
               </li>
             </ul>
           </div>
@@ -220,7 +220,7 @@
   </div>
 
 <!--FORMULARIO-->
-<h3 class="text-center">REALICE SU CONSULTA</h3>
+<h2 class="titulo">Realice su consulta</h2>
 <div class="container col-md-6"> 
   <form action="/" method="post" class="formulario">
     <div class="form-floating mb-3">
@@ -232,7 +232,7 @@
       <label for="email">Correo electrónico</label>
     </div>
     <div class="form-floating">
-      <textarea class="form-control" placeholder="Consulta" style="height: 100px" name="consulta"></textarea>
+      <textarea class="form-control" placeholder="Consulta" style="height: 100px" name="consulta" type="text"></textarea>
       <label for="mensaje">Consulta</label>
       <div class="d-grid gap-2">
       <button type="submit" class="btn btn-outline-success" style="margin-top: 10px;" value="Enviar">Enviar</button>
